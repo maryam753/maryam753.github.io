@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maryam Arif – AI Engineer</title>
+<meta name="description" content="Portfolio of Maryam Arif, AI/ML engineer focused on agentic RAG, evaluation, and guardrails.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#F6F8FB;--tx:#0B1220;--tx2:#2B364D;--mu:#4A566E;--ac:#087A63;--ac2:#3B6FD9;--acr:8,122,99;--on:#FFFFFF;--card:#FFFFFF;--card2:#EEF2F7;--bd:#D5DCE8;--bd2:#C2CBDB;--bd3:#E3E8F0;color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#06080F;--tx:#E8ECF4;--tx2:#B7C0D4;--mu:#8F9BB3;--ac:#4FF0C8;--ac2:#8FB4FF;--acr:79,240,200;--on:#06080F;--card:#0B1220;--card2:#080D18;--bd:#1C2740;--bd2:#243049;--bd3:#17213A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#06080F;--tx:#E8ECF4;--tx2:#B7C0D4;--mu:#8F9BB3;--ac:#4FF0C8;--ac2:#8FB4FF;--acr:79,240,200;--on:#06080F;--card:#0B1220;--card2:#080D18;--bd:#1C2740;--bd2:#243049;--bd3:#17213A;color-scheme:dark}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg)}
+.pf{background:var(--bg);color:var(--tx)}
+
+
+a{color:inherit;text-decoration:none}
+.pf{font-family:'Space Grotesk',sans-serif;background:var(--bg);color:var(--tx);position:relative;overflow:hidden;line-height:1.55}
+.pf *{box-sizing:border-box}
+.pf h1,.pf h2,.pf h3{margin:0;font-weight:700;letter-spacing:-0.03em}
+.mono{font-family:'JetBrains Mono',monospace}
+.wrap{max-width:1200px;margin:0 auto;padding:0 40px;position:relative;z-index:2}
+.mut{color:var(--mu)}.acc{color:var(--ac)}
+.grid-bg{position:absolute;inset:0;z-index:0;background-image:linear-gradient(var(--bd3) 1px,transparent 1px),linear-gradient(90deg,var(--bd3) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 70% 40% at 50% 0%,#000,transparent);-webkit-mask-image:radial-gradient(ellipse 70% 40% at 50% 0%,#000,transparent);opacity:.8}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;z-index:1;animation:drift 12s ease-in-out infinite}
+.g1{width:520px;height:520px;right:-100px;top:80px;background:radial-gradient(circle,rgba(var(--acr),.2),transparent 70%)}
+.g2{width:420px;height:420px;left:-140px;top:900px;background:radial-gradient(circle,rgba(110,140,255,.14),transparent 70%);animation-direction:reverse}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:20px}
+.mk{width:40px;height:40px;border-radius:12px;background:var(--ac);color:var(--on);display:grid;place-items:center;font-weight:700}
+.nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0;font-size:15px}
+.ul{position:relative;padding:6px 0}
+.ul:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--ac);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.ul:hover:after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--ac);color:var(--on);font-weight:700;padding:14px 26px;border-radius:12px;transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(var(--acr),.28)}
+.btn.o{background:transparent;color:var(--tx);border:1.5px solid var(--bd2)}
+.btn.o:hover{border-color:var(--ac);box-shadow:none}
+.hero{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center;padding:60px 0 100px}
+.tag{display:inline-flex;align-items:center;gap:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--bd2);border-radius:999px;padding:8px 16px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ac);animation:pulse 1.8s infinite}
+.hero h1{font-size:78px;line-height:1;margin:26px 0 24px}
+.hl{background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac));background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 5s linear infinite}
+.hero p{font-size:19px;max-width:540px;margin:0 0 34px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.term{background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:20px;box-shadow:0 30px 80px rgba(0,0,0,.5);animation:floaty 7s ease-in-out infinite}
+.bar3{display:flex;gap:7px;margin-bottom:16px;align-items:center}
+.bar3 i{width:11px;height:11px;border-radius:50%;background:var(--bd2)}
+.bar3 span{margin-left:10px;font-size:12px}
+.nd{display:flex;justify-content:space-between;align-items:center;border:1px solid var(--bd);border-radius:12px;padding:11px 16px;margin-bottom:8px;font-size:13px;animation:lit 8s infinite}
+.nd b{font-weight:500}
+.nd:nth-child(3){animation-delay:0s}.nd:nth-child(4){animation-delay:1.1s}.nd:nth-child(5){animation-delay:2.2s}.nd:nth-child(6){animation-delay:3.3s}.nd:nth-child(7){animation-delay:4.4s}.nd:nth-child(8){animation-delay:5.5s}
+.sc2{margin-top:16px;border-top:1px dashed var(--bd2);padding-top:16px}
+.m{display:grid;grid-template-columns:130px 1fr 44px;gap:10px;align-items:center;font-size:12px;margin-bottom:9px}
+.tr{height:6px;border-radius:6px;background:var(--bd3);overflow:hidden}
+.tr i{display:block;height:100%;background:var(--ac);border-radius:6px;animation:fillw 1.8s .9s both cubic-bezier(.2,.8,.2,1)}
+.tick{border-top:1px solid var(--bd3);border-bottom:1px solid var(--bd3);overflow:hidden;white-space:nowrap;padding:20px 0;position:relative;z-index:2}
+.trk{display:inline-flex;gap:48px;padding-right:48px;animation:marq 30s linear infinite}
+.trk span{font-size:15px;color:var(--mu)}
+.trk span:before{content:"/ ";color:var(--ac)}
+.sec{padding:110px 0 0}
+.eb{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--ac)}
+.sec h2{font-size:56px;line-height:1.04;margin:14px 0 48px;max-width:760px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pl{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:32px;transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.pl:hover{transform:translateY(-8px);border-color:var(--ac)}
+.pl .n{font-size:13px;color:var(--ac)}
+.pl h3{font-size:26px;margin:14px 0 10px}
+.pl p{margin:0;color:var(--mu)}
+.feat{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;background:var(--card);border:1px solid var(--bd);border-radius:28px;padding:44px;transition:border-color .3s}
+.feat:hover{border-color:var(--ac)}
+.feat h3{font-size:38px;margin:12px 0 14px}
+.feat ul{margin:0 0 22px;padding:0;list-style:none}
+.feat li{padding:10px 0 10px 26px;border-top:1px solid var(--bd3);color:var(--tx2);position:relative;font-size:15px}
+.feat li:before{content:"";position:absolute;left:0;top:19px;width:10px;height:2px;background:var(--ac)}
+.chip{display:inline-block;font-size:12px;border:1px solid var(--bd2);border-radius:999px;padding:5px 12px;margin:0 6px 8px 0;color:var(--mu);transition:all .3s}
+.chip:hover{background:var(--ac);color:var(--on);border-color:var(--ac)}
+.vz{background:var(--card2);border:1px solid var(--bd3);border-radius:20px;padding:26px;display:flex;flex-direction:column;justify-content:center;gap:14px;min-height:360px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.fn{font-size:12px;border:1px solid var(--bd2);border-radius:10px;padding:9px 12px;animation:lit2 6s infinite}
+.fn:nth-of-type(2){animation-delay:1s}.fn:nth-of-type(3){animation-delay:2s}.fn:nth-of-type(4){animation-delay:3s}.fn:nth-of-type(5){animation-delay:4s}.fn:nth-of-type(6){animation-delay:5s}
+.ar{color:var(--bd2);font-size:12px}
+.retry{border:1px dashed var(--ac);border-radius:12px;padding:12px 14px;font-size:12px;color:var(--ac);display:flex;gap:10px;align-items:center}
+.retry:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ac);animation:pulse 1.8s infinite}
+.g4{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:28px;display:flex;flex-direction:column;transition:transform .4s,border-color .3s}
+.card:hover{transform:translateY(-8px);border-color:var(--ac)}
+.card h3{font-size:24px;margin:10px 0}
+.card p{margin:0 0 18px;color:var(--mu);font-size:15px;flex:1}
+.lk{color:var(--ac);font-weight:700;font-size:15px;transition:letter-spacing .3s}
+.card:hover .lk{letter-spacing:.04em}
+.sk{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.sk div.b{border:1px solid var(--bd);border-radius:20px;padding:26px;background:var(--card)}
+.sk h3{font-size:18px;margin-bottom:14px;color:var(--ac);font-weight:500}
+.tl{border-left:2px solid var(--bd);margin-left:8px}
+.it{position:relative;padding:0 0 38px 36px}
+.it:before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--ac)}
+.it h3{font-size:24px}
+.it .d{font-size:13px;color:var(--ac)}
+.it p{margin:8px 0 0;color:var(--mu);max-width:680px}
+.cta{margin:110px 0 0;border:1px solid var(--bd2);border-radius:36px;padding:80px 50px;text-align:center;background:radial-gradient(ellipse at 50% 0%,rgba(var(--acr),.16),var(--card) 70%)}
+.cta h2{font-size:64px;line-height:1.02;max-width:860px;margin:0 auto 20px}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:50px 0 44px;font-size:14px}
+.up{animation:up .9s cubic-bezier(.2,.8,.2,1) both}
+@keyframes up{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:none}}
+@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(-30px,30px)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(var(--acr),.6)}100%{box-shadow:0 0 0 12px rgba(var(--acr),0)}}
+@keyframes shine{to{background-position:200% center}}
+@keyframes marq{to{transform:translateX(-50%)}}
+@keyframes fillw{from{width:0}}
+@keyframes lit{0%{border-color:var(--bd);background:transparent;transform:none}2%,13%{border-color:var(--ac);background:rgba(var(--acr),.09);transform:translateX(8px)}16%,100%{border-color:var(--bd);background:transparent;transform:none}}
+@keyframes lit2{0%{border-color:var(--bd2);color:var(--tx)}3%,15%{border-color:var(--ac);color:var(--ac)}20%,100%{border-color:var(--bd2);color:var(--tx)}}
+@supports (animation-timeline:view()){.sv{animation:up linear both;animation-timeline:view();animation-range:entry 0% entry 45%}}
+@media (max-width:900px){.hero,.feat{grid-template-columns:1fr}.hero h1{font-size:48px}.sec h2{font-size:36px}.cta h2{font-size:38px}.g3,.g4,.sk{grid-template-columns:1fr}.nav ul{display:none}.feat{padding:26px}.cta{padding:48px 22px}}
+@media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}}
+
+</style>
+</head>
+<body>
+<div class="pf" id="top">
+<div class="grid-bg"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+<div class="nav up">
+<a href="#top" class="logo"><span class="mk">MA</span>Maryam Arif</a>
+<ul><li><a class="ul" href="#focus">Focus</a></li><li><a class="ul" href="#projects">Projects</a></li><li><a class="ul" href="#skills">Skills</a></li><li><a class="ul" href="#journey">Journey</a></li></ul>
+<a class="btn" href="#contact">Get in touch</a>
+</div>
+<div class="hero">
+<div>
+<div class="tag mono up" style="animation-delay:.1s"><span class="dot"></span>AI/ML Engineer · Open to opportunities</div>
+<h1 class="up" style="animation-delay:.2s">I build AI systems you can <span class="hl">trust</span>.</h1>
+<p class="mut up" style="animation-delay:.35s">AI/ML engineer focused on agentic RAG, evaluation, and guardrails, backed by a strong backend foundation in FastAPI, Laravel, and Flask.</p>
+<div class="row up" style="animation-delay:.5s"><a class="btn" href="#projects">View projects</a><a class="btn o" href="https://github.com/maryam753">GitHub profile</a></div>
+</div>
+<div class="term mono up" style="animation-delay:.5s">
+<div class="bar3"><i></i><i></i><i></i><span class="mut">cortex / agent pipeline</span></div>
+<div class="nd"><b>route</b><span class="mut">direct · retrieve · recall</span></div>
+<div class="nd"><b>select_files</b><span class="mut">pick documents</span></div>
+<div class="nd"><b>retrieve</b><span class="mut">vector + BM25</span></div>
+<div class="nd"><b>rerank</b><span class="mut">cross-encoder</span></div>
+<div class="nd"><b>grade</b><span class="mut">retry if weak</span></div>
+<div class="nd"><b>answer</b><span class="mut">cited + guarded</span></div>
+<div class="sc2"><div class="mut" style="font-size:11px;margin-bottom:10px;letter-spacing:.1em">RAGAS · INITIAL TEST SET</div>
+<div class="m"><span>faithfulness</span><div class="tr"><i style="width:100%"></i></div><span class="acc">1.00</span></div>
+<div class="m"><span>answer relevancy</span><div class="tr"><i style="width:98.7%"></i></div><span class="acc">0.99</span></div>
+<div class="m"><span>context precision</span><div class="tr"><i style="width:100%"></i></div><span class="acc">1.00</span></div>
+<div class="m"><span>context recall</span><div class="tr"><i style="width:100%"></i></div><span class="acc">1.00</span></div></div>
+</div>
+</div>
+</div>
+<div class="tick"><div class="trk"><span>Python</span><span>FastAPI</span><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>RAGAS</span><span>LangSmith</span><span>Groq</span><span>Gemini API</span><span>PostgreSQL</span><span>React</span><span>Laravel</span><span>Python</span><span>FastAPI</span><span>LangChain</span><span>LangGraph</span><span>ChromaDB</span><span>RAGAS</span><span>LangSmith</span><span>Groq</span><span>Gemini API</span><span>PostgreSQL</span><span>React</span><span>Laravel</span></div></div>
+<div class="wrap">
+<div class="sec" id="focus">
+<div class="eb mono sv">What I focus on</div>
+<h2 class="sv">Not just another RAG demo. Quality, security, and reliability.</h2>
+<div class="g3">
+<div class="pl sv"><span class="n mono">01 / EVALUATION</span><h3>Measure, don’t guess</h3><p>Automated RAGAS evaluation with LLM-generated test questions and a separate judge model, so quality is a number, not a feeling.</p></div>
+<div class="pl sv" style="animation-delay:.08s"><span class="n mono">02 / SECURITY</span><h3>Guardrails and isolation</h3><p>Prompt-injection blocking, sensitive-data redaction, citation checks, and per-user data isolation enforced at the database level.</p></div>
+<div class="pl sv" style="animation-delay:.16s"><span class="n mono">03 / RELIABILITY</span><h3>Observable and resilient</h3><p>LangSmith tracing on every step, self-correcting retrieval, and API key failover so one rate limit never stops the system.</p></div>
+</div>
+</div>
+<div class="sec" id="projects">
+<div class="eb mono sv">Selected projects</div>
+<h2 class="sv">Systems built to be trusted in production.</h2>
+<div class="feat sv">
+<div>
+<span class="eb mono">Featured · Agentic RAG</span>
+<h3>Cortex</h3>
+<ul>
+<li>Every answer grounded in the user’s own documents with verifiable inline citations, by text or voice.</li>
+<li>Hybrid search (vector + BM25) with cross-encoder reranking for higher retrieval accuracy.</li>
+<li>Input and output guardrails, red-team tested against adversarial prompts.</li>
+<li>JWT, bcrypt, and Google OAuth with per-user isolated vector collections.</li>
+</ul>
+<span class="chip mono">Python</span><span class="chip mono">FastAPI</span><span class="chip mono">LangGraph</span><span class="chip mono">ChromaDB</span><span class="chip mono">RAGAS</span><span class="chip mono">LangSmith</span><span class="chip mono">PostgreSQL</span><span class="chip mono">React</span>
+</div>
+<div class="vz">
+<div class="mut mono" style="font-size:11px;letter-spacing:.1em">SELF-CORRECTING RETRIEVAL</div>
+<div class="flow mono"><span class="fn">condense</span><span class="ar">→</span><span class="fn">retrieve</span><span class="ar">→</span><span class="fn">rerank</span><span class="ar">→</span><span class="fn">grade</span><span class="ar">→</span><span class="fn">answer</span></div>
+<div class="retry mono">Weak context? Reword the query and retry (max 2 attempts)</div>
+<div class="mut mono" style="font-size:12px">Every node traced in LangSmith: inputs, outputs, latency.</div>
+</div>
+</div>
+<div class="g4">
+<a class="card sv" href="https://github.com/maryam753/chat-with-maryam-ai"><span class="eb mono">AI · FastAPI · Groq · React</span><h3>Chat with Maryam AI</h3><p>An AI twin of my resume: recruiters can chat with it instead of reading a static CV.</p><span class="lk">View on GitHub →</span></a>
+<a class="card sv" style="animation-delay:.08s" href="https://github.com/maryam753/mentalhealthchatbot"><span class="eb mono">Laravel · Botman · Gemini</span><h3>MindMate</h3><p>Final-year project: an AI mental health chatbot with authentication and real-time chat.</p><span class="lk">View on GitHub →</span></a>
+<a class="card sv" style="animation-delay:.16s" href="https://github.com/maryam753/resume-analyzer"><span class="eb mono">Flask · Gemini API</span><h3>Resume Analyzer</h3><p>Upload a CV to get an ATS score, skill gap analysis, and AI-generated improvement suggestions.</p><span class="lk">View on GitHub →</span></a>
+</div>
+</div>
+<div class="sec" id="skills">
+<div class="eb mono sv">Toolkit</div>
+<h2 class="sv">The stack behind the systems.</h2>
+<div class="sk">
+<div class="b sv"><h3 class="mono">AI / ML</h3><span class="chip">LLMs</span><span class="chip">Agentic RAG</span><span class="chip">RAG Pipelines</span><span class="chip">Prompt Engineering</span><span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">Hybrid Search</span><span class="chip">Reranking</span><span class="chip">RAGAS Evaluation</span><span class="chip">LLM Guardrails</span><span class="chip">LangSmith</span><span class="chip">Scikit-learn</span></div>
+<div class="b sv" style="animation-delay:.08s"><h3 class="mono">Backend</h3><span class="chip">Python</span><span class="chip">PHP</span><span class="chip">FastAPI</span><span class="chip">Flask</span><span class="chip">Laravel</span><span class="chip">REST APIs</span><span class="chip">JWT Auth</span><span class="chip">Streaming APIs</span></div>
+<div class="b sv"><h3 class="mono">Data and Integrations</h3><span class="chip">ChromaDB</span><span class="chip">PostgreSQL</span><span class="chip">MySQL</span><span class="chip">Groq API</span><span class="chip">Gemini API</span><span class="chip">Whisper</span><span class="chip">gTTS</span><span class="chip">Google OAuth</span></div>
+<div class="b sv" style="animation-delay:.08s"><h3 class="mono">Frontend and Tools</h3><span class="chip">React</span><span class="chip">Vite</span><span class="chip">HTML / CSS</span><span class="chip">Bootstrap</span><span class="chip">Git / GitHub</span><span class="chip">Railway</span><span class="chip">Claude Code</span></div>
+</div>
+</div>
+<div class="sec" id="journey">
+<div class="eb mono sv">Journey</div>
+<h2 class="sv">Experience and education.</h2>
+<div class="tl">
+<div class="it sv"><span class="d mono">2026 – PRESENT</span><h3>AI/ML Technical Trainee, Invozone</h3><p>Hands-on training in machine learning and deep learning fundamentals, applied alongside backend and AI-integration experience.</p></div>
+<div class="it sv"><span class="d mono">05/2026 – 06/2026</span><h3>Backend Developer Intern, DevelopersHub Corporation</h3><p>Built RESTful APIs and backend apps with Laravel, PHP, and MySQL, including a Bookstore Management System and an E-Commerce platform.</p></div>
+<div class="it sv"><span class="d mono">2022 – 2026</span><h3>Bachelor of Information Technology</h3><p>Government College University, Faisalabad, Pakistan.</p></div>
+</div>
+</div>
+<div class="cta sv" id="contact">
+<div class="eb mono">Contact</div>
+<h2 style="margin-top:14px">Let’s build AI you can rely on.</h2>
+<p class="mut" style="margin:0 0 30px">Open to AI/ML engineering roles and projects.</p>
+<div class="row" style="justify-content:center"><a class="btn" href="mailto:maryemarif89@gmail.com">maryemarif89@gmail.com</a><a class="btn o" href="https://www.linkedin.com/in/maryamarif1998">LinkedIn</a><a class="btn o" href="https://github.com/maryam753">GitHub</a></div>
+</div>
+<div class="foot mut mono"><span>© 2026 Maryam Arif</span><span>Mian Channu, Pakistan</span></div>
+</div>
+</div>
+</body>
+</html>
