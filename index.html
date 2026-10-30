@@ -85,6 +85,11 @@ a{color:inherit;text-decoration:none}
 .ar{color:var(--bd2);font-size:12px}
 .retry{border:1px dashed var(--ac);border-radius:12px;padding:12px 14px;font-size:12px;color:var(--ac);display:flex;gap:10px;align-items:center}
 .retry:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--ac);animation:pulse 1.8s infinite}
+.art{display:flex;justify-content:space-between;align-items:center;gap:30px;margin-top:24px;background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:30px 36px;transition:transform .4s cubic-bezier(.2,.8,.2,1),border-color .3s}
+.art:hover{transform:translateY(-6px);border-color:var(--ac)}
+.art h3{font-size:26px;margin:10px 0 8px}
+.art p{margin:0;color:var(--mu);max-width:640px}
+.art .go{flex-shrink:0}
 .g4{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:24px}
 .card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:28px;display:flex;flex-direction:column;transition:transform .4s,border-color .3s}
 .card:hover{transform:translateY(-8px);border-color:var(--ac)}
@@ -115,7 +120,7 @@ a{color:inherit;text-decoration:none}
 @keyframes lit{0%{border-color:var(--bd);background:transparent;transform:none}2%,13%{border-color:var(--ac);background:rgba(var(--acr),.09);transform:translateX(8px)}16%,100%{border-color:var(--bd);background:transparent;transform:none}}
 @keyframes lit2{0%{border-color:var(--bd2);color:var(--tx)}3%,15%{border-color:var(--ac);color:var(--ac)}20%,100%{border-color:var(--bd2);color:var(--tx)}}
 @supports (animation-timeline:view()){.sv{animation:up linear both;animation-timeline:view();animation-range:entry 0% entry 45%}}
-@media (max-width:900px){.hero,.feat{grid-template-columns:1fr}.hero h1{font-size:48px}.sec h2{font-size:36px}.cta h2{font-size:38px}.g3,.g4,.sk{grid-template-columns:1fr}.nav ul{display:none}.feat{padding:26px}.cta{padding:48px 22px}}
+@media (max-width:900px){.hero,.feat{grid-template-columns:1fr}.hero h1{font-size:48px}.sec h2{font-size:36px}.cta h2{font-size:38px}.g3,.g4,.sk{grid-template-columns:1fr}.nav ul{display:none}.feat{padding:26px}.art{flex-direction:column;align-items:flex-start;padding:26px}.cta{padding:48px 22px}}
 @media (prefers-reduced-motion:reduce){.pf *{animation:none!important;transition:none!important}}
 
 </style>
@@ -133,7 +138,7 @@ a{color:inherit;text-decoration:none}
 <div>
 <div class="tag mono up" style="animation-delay:.1s"><span class="dot"></span>AI/ML Engineer · Open to opportunities</div>
 <h1 class="up" style="animation-delay:.2s">I build AI systems you can <span class="hl">trust</span>.</h1>
-<p class="mut up" style="animation-delay:.35s">AI/ML engineer focused on agentic RAG, evaluation, and guardrails, backed by a strong backend foundation in Python, FastAPI, and Flask.</p>
+<p class="mut up" style="animation-delay:.35s">I turn real problems into production-ready AI solutions: agentic RAG systems built with evaluation, security guardrails, and observability from day one.</p>
 <div class="row up" style="animation-delay:.5s"><a class="btn" href="#projects">View projects</a><a class="btn o" href="https://github.com/maryam753">GitHub profile</a></div>
 </div>
 <div class="term mono up" style="animation-delay:.5s">
@@ -185,6 +190,7 @@ a{color:inherit;text-decoration:none}
 <div class="mut mono" style="font-size:12px">Every node traced in LangSmith: inputs, outputs, latency.</div>
 </div>
 </div>
+<a class="art sv" href="https://medium.com/@maryam.arif_61418/beyond-basic-rag-building-cortex-an-agentic-document-assistant-802b1297c75b" target="_blank" rel="noopener"><div><span class="eb mono">Article · Medium</span><h3>Beyond Basic RAG: Building Cortex, an Agentic Document Assistant</h3><p>Most RAG tutorials stop at “upload a PDF and ask a question.” In this article, I share the story of building Cortex: why a basic retrieve-and-answer pipeline was not enough, and how I turned it into an agentic system that routes questions, reranks results, and retries when retrieval is weak. I also cover how I added guardrails, per-user data isolation, RAGAS evaluation, and LangSmith tracing, and what I learned about making AI systems reliable, secure, and measurable.</p></div><span class="btn go">Read the article →</span></a>
 <div class="g4">
 <a class="card sv" href="https://github.com/maryam753/chat-with-maryam-ai"><span class="eb mono">AI · FastAPI · Groq · React</span><h3>Chat with Maryam AI</h3><p>An AI twin of my resume: recruiters can chat with it instead of reading a static CV.</p><span class="lk">View on GitHub →</span></a>
 <a class="card sv" style="animation-delay:.08s" href="https://github.com/maryam753/mentalhealthchatbot"><span class="eb mono">Laravel · Botman · Gemini</span><h3>MindMate</h3><p>Final-year project: an AI mental health chatbot with authentication and real-time chat.</p><span class="lk">View on GitHub →</span></a>
